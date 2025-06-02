@@ -11,5 +11,5 @@ ProDet is implemented within the framework of [DeepfakeBench](https://github.com
 There is no additional package required beyond DeepfakeBench and this repository, hence you should easily reproduce the training of our paper with an established DeepfakeBench environment as:
 
 ```python
-python3 -m torch.distributed.launch --nproc_per_node=4  training/dynamic_train_ppo_newreward_domain.py --detector_path /mnt/bd/deepfake/DeepfakeBench/training/config/detector/core_with_domain.yaml --detector_path2 /mnt/bd/deepfake/DeepfakeBench/training/config/detector/ppo2.yaml --no-save_ckpt --no-save_feat --ddp
+python3 -m torch.distributed.launch --nproc_per_node=4  training/train_ppo.py --detector_path ./DeepfakeBench/training/config/detector/CRDA_detector.yaml --detector_path2 ./DeepfakeBench/training/config/detector/ppo2.yaml --no-save_ckpt --no-save_feat --ddp
 ```
